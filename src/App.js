@@ -1,24 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+
+import { Box, Container, CssBaseline, Typography } from "@mui/material";
+import CustomTable from "./components/table/CustomTable";
+import CustomColor from "./components/customColor/CustomColor";
+import AssetForm from "./components/assetForm/AssetForm";
 
 function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <CssBaseline />
+      <Container maxWidth="lg" sx={{ mt: 5 }}>
+        <Typography variant="h4" align="center" gutterBottom>
+          Customizable Table
+        </Typography>
+        <CustomTable/>
+        <br/>
+        <hr/>
+        <Typography variant="h4" align="center" gutterBottom>
+          Customizable Form
+        </Typography>
+        <AssetForm/>
+
+        <Box sx={{ mt: 3 }}>
+          <CustomColor />
+        </Box>
+      </Container>
+    </>
   );
 }
 
