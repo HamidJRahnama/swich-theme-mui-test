@@ -32,7 +32,6 @@ const CustomTable = () => {
       component={Paper}
       style={{ maxWidth: 800, margin: "auto", marginTop: 40, backgroundColor: tableColors.background }}
     >
-      <button onClick={()=>console.log(tableColors)}>tableTheme</button>
       <Table>
         <TableHead>
           <TableRow>
